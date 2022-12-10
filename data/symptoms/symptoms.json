@@ -1,17 +1,113 @@
 {
-  "disease": {
+  "Alzheimers": {
     "headache":  "no",
-    "back_pain",
-    "chest_pain",
-    "cough",
-    "fainting",
-    "sore_throat",
-    "fatigue",
-    "restlessness",
-    "low_body_temp",
-    "fever",
-    "sunken_eyes",
-    "nausea",
-    "blurred_vision"
+    "back_pain":  "no",
+    "chest_pain": "no",
+    "cough": "no",
+    "fainting": "no",
+    "sore_throat": "no",
+    "fatigue": "no",
+    "restlessness": "high",
+    "low_body_temp": "no",
+    "fever": "no",
+    "sunken_eyes": "no",
+    "nausea": "no",
+    "blurred_vision": "no"
+  },
+
+  "Arthritis": {
+    "headache":  "no",
+    "back_pain":  "high",
+    "chest_pain": "no",
+    "cough": "no",
+    "fainting": "no",
+    "sore_throat": "no",
+    "fatigue": "low",
+    "restlessness": "no",
+    "low_body_temp": "no",
+    "fever": "no",
+    "sunken_eyes": "no",
+    "nausea": "no",
+    "blurred_vision": "no"
+  },
+
+  "Asthma": {
+    "headache":  "no",
+    "back_pain":  "no",
+    "chest_pain": "high",
+    "cough": "high",
+    "fainting": "no",
+    "sore_throat": "no",
+    "fatigue": "no",
+    "restlessness": "low",
+    "low_body_temp": "no",
+    "fever": "no",
+    "sunken_eyes": "no",
+    "nausea": "no",
+    "blurred_vision": "no"
+  },
+
+  "Coronavirus": {
+    "headache":  "high",
+    "back_pain":  "no",
+    "chest_pain": "high",
+    "cough": "high",
+    "fainting": "no",
+    "sore_throat": "high",
+    "fatigue": "high",
+    "restlessness": "no",
+    "low_body_temp": "no",
+    "fever": "high",
+    "sunken_eyes": "no",
+    "nausea": "no",
+    "blurred_vision": "no"
+  },
+
+  "Diabetes": {
+    "headache":  "no",
+    "back_pain":  "no",
+    "chest_pain": "no",
+    "cough": "no",
+    "fainting": "no",
+    "sore_throat": "no",
+    "fatigue": "high",
+    "restlessness": "no",
+    "low_body_temp": "no",
+    "fever": "no",
+    "sunken_eyes": "no",
+    "nausea": "low",
+    "blurred_vision": "low"
+  },
+
+  "Epilepsy": {
+    "headache":  "no",
+    "back_pain":  "no",
+    "chest_pain": "no",
+    "cough": "no",
+    "fainting": "no",
+    "sore_throat": "no",
+    "fatigue": "low",
+    "restlessness": "no",
+    "low_body_temp": "no",
+    "fever": "no",
+    "sunken_eyes": "no",
+    "nausea": "no",
+    "blurred_vision": "no"
+  },
+
+  "Glaucoma": {
+    "headache":  "low",
+    "back_pain":  "no",
+    "chest_pain": "no",
+    "cough": "no",
+    "fainting": "no",
+    "sore_throat": "no",
+    "fatigue": "no",
+    "restlessness": "no",
+    "low_body_temp": "no",
+    "fever": "no",
+    "sunken_eyes": "no",
+    "nausea": "high",
+    "blurred_vision": "low"
   }
 }
