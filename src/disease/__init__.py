@@ -1,17 +1,17 @@
 class Disease:
-    headache = None
-    back_pain = None
-    chest_pain = None
-    cough = None
-    fainting = None
-    sore_throat = None
-    fatigue = None
-    restlessness = None
-    low_body_temp = None
-    fever = None
-    sunken_eyes = None
-    nausea = None
-    blurred_vision = None
+    headache = 'no'
+    back_pain = 'no'
+    chest_pain = 'no'
+    cough = 'no'
+    fainting = 'no'
+    sore_throat = 'no'
+    fatigue = 'no'
+    restlessness = 'no'
+    low_body_temp = 'no'
+    fever = 'no'
+    sunken_eyes = 'no'
+    nausea = 'no'
+    blurred_vision = 'no'
 
     def __init__(
             self,

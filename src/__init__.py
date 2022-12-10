@@ -5,76 +5,70 @@ from src.disease import Disease
 
 class Greetings(KnowledgeEngine):
 
-    def __init__(self, symptom_map, if_not_matched, get_treatments, get_details):
+    def __init__(self, symptom_map, if_not_matched, get_treatments, get_details, case):
         self.symptom_map = symptom_map
         self.if_not_matched = if_not_matched
         self.get_details = get_details
         self.get_treatments = get_treatments
+        self.case: Disease = case
         KnowledgeEngine.__init__(self)
 
     # code giving instructions on how to use the Expert System
     @DefFacts()
     def _initial_action(self):
-        print("")
-        print("This is a knowledge based bot to diagnose diseases")
-        print("")
-        print("Do you feel any of the following symptoms?")
-        print("Reply high or low or no")
-        print("")
         yield Fact(action="find_disease")
 
-    # taking various input from user
     @Rule(Fact(action="find_disease"), NOT(Fact(headache=W())), salience=4)
-    def symptom_0(self):
-        self.declare(Fact(headache=input("headache: ")))
+    def headache(self):
+        self.declare(Fact(headache=self.case.headache))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(back_pain=W())), salience=1)
-    def symptom_1(self):
-        self.declare(Fact(back_pain=input("back pain: ")))
+    def back_pain(self):
+        self.declare(Fact(back_pain=self.case.back_pain))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(chest_pain=W())), salience=1)
-    def symptom_2(self):
-        self.declare(Fact(chest_pain=input("chest pain: ")))
+    def chest_pain(self):
+        self.declare(Fact(chest_pain=self.case.chest_pain))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(cough=W())), salience=3)
-    def symptom_3(self):
-        self.declare(Fact(cough=input("cough: ")))
+    def cough(self):
+        self.declare(Fact(cough=self.case.cough))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(fainting=W())), salience=1)
-    def symptom_4(self):
-        self.declare(Fact(fainting=input("fainting: ")))
+    def fainting(self):
+        self.declare(Fact(fainting=self.case.fainting))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(fatigue=W())), salience=1)
-    def symptom_5(self):
-        self.declare(Fact(fatigue=input("fatigue: ")))
+    def fatigue(self):
+        self.declare(Fact(fatigue=self.case.fatigue))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(sunken_eyes=W())), salience=1)
-    def symptom_6(self):
-        self.declare(Fact(sunken_eyes=input("sunken eyes: ")))
+    def sunken_eyes(self):
+        self.declare(Fact(sunken_eyes=self.case.sunken_eyes))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(low_body_temp=W())), salience=1)
-    def symptom_7(self):
-        self.declare(Fact(low_body_temp=input("low body temperature: ")))
+    def low_body_temp(self):
+        self.declare(Fact(low_body_temp=self.case.low_body_temp))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(restlessness=W())), salience=1)
-    def symptom_8(self):
-        self.declare(Fact(restlessness=input("restlessness: ")))
+    def restlessness(self):
+        self.declare(Fact(restlessness=self.case.restlessness))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(sore_throat=W())), salience=1)
-    def symptom_9(self):
-        self.declare(Fact(sore_throat=input("sore throat: ")))
+    def sore_throat(self):
+        self.declare(Fact(sore_throat=self.case.sore_throat))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(fever=W())), salience=1)
-    def symptom_10(self):
-        self.declare(Fact(fever=input("fever: ")))
+    def fever(self):
+        self.declare(Fact(fever=self.case.fever))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(nausea=W())), salience=1)
-    def symptom_11(self):
-        self.declare(Fact(nausea=input("nausea: ")))
+    def nausea(self):
+        self.declare(Fact(nausea=self.case.nausea))
 
     @Rule(Fact(action="find_disease"), NOT(Fact(blurred_vision=W())), salience=1)
-    def symptom_12(self):
-        self.declare(Fact(blurred_vision=input("blurred_vision: ")))
+    def blurred_vision(self):
+        self.declare(Fact(blurred_vision=self.case.blurred_vision))
 
     # different rules checking for each disease match
     @Rule(
@@ -112,7 +106,7 @@ class Greetings(KnowledgeEngine):
         Fact(nausea="no"),
         Fact(blurred_vision="no"),
     )
-    def disease_1(self):
+    def alzheimers(self):
         self.declare(Fact(disease="Alzheimers"))
 
     @Rule(
@@ -131,7 +125,7 @@ class Greetings(KnowledgeEngine):
         Fact(nausea="no"),
         Fact(blurred_vision="no"),
     )
-    def disease_2(self):
+    def arthritis(self):
         self.declare(Fact(disease="Arthritis"))
 
     @Rule(
@@ -150,7 +144,7 @@ class Greetings(KnowledgeEngine):
         Fact(nausea="no"),
         Fact(blurred_vision="no"),
     )
-    def disease_3(self):
+    def tuberculosis(self):
         self.declare(Fact(disease="Tuberculosis"))
 
     @Rule(
@@ -169,7 +163,7 @@ class Greetings(KnowledgeEngine):
         Fact(nausea="no"),
         Fact(blurred_vision="no"),
     )
-    def disease_4(self):
+    def asthma(self):
         self.declare(Fact(disease="Asthma"))
 
     @Rule(
@@ -188,7 +182,7 @@ class Greetings(KnowledgeEngine):
         Fact(nausea="no"),
         Fact(blurred_vision="no"),
     )
-    def disease_5(self):
+    def sinusitis(self):
         self.declare(Fact(disease="Sinusitis"))
 
     @Rule(
@@ -207,7 +201,7 @@ class Greetings(KnowledgeEngine):
         Fact(nausea="no"),
         Fact(blurred_vision="no"),
     )
-    def disease_6(self):
+    def epilepsy(self):
         self.declare(Fact(disease="Epilepsy"))
 
     @Rule(
@@ -226,7 +220,7 @@ class Greetings(KnowledgeEngine):
         Fact(nausea="high"),
         Fact(blurred_vision="no"),
     )
-    def disease_7(self):
+    def heart_disease(self):
         self.declare(Fact(disease="Heart Disease"))
 
     @Rule(
@@ -245,7 +239,7 @@ class Greetings(KnowledgeEngine):
         Fact(nausea="low"),
         Fact(blurred_vision="low"),
     )
-    def disease_8(self):
+    def diabetes(self):
         self.declare(Fact(disease="Diabetes"))
 
     @Rule(
@@ -264,7 +258,7 @@ class Greetings(KnowledgeEngine):
         Fact(nausea="high"),
         Fact(blurred_vision="low"),
     )
-    def disease_9(self):
+    def glaucoma(self):
         self.declare(Fact(disease="Glaucoma"))
 
     @Rule(
@@ -283,7 +277,7 @@ class Greetings(KnowledgeEngine):
         Fact(nausea="low"),
         Fact(blurred_vision="no"),
     )
-    def disease_10(self):
+    def hyperthyroidism(self):
         self.declare(Fact(disease="Hyperthyroidism"))
 
     @Rule(
@@ -302,7 +296,7 @@ class Greetings(KnowledgeEngine):
         Fact(nausea="high"),
         Fact(blurred_vision="no"),
     )
-    def disease_11(self):
+    def heat_stroke(self):
         self.declare(Fact(disease="Heat Stroke"))
 
     @Rule(
@@ -321,7 +315,7 @@ class Greetings(KnowledgeEngine):
         Fact(nausea="no"),
         Fact(blurred_vision="no"),
     )
-    def disease_12(self):
+    def hypothermia(self):
         self.declare(Fact(disease="Hypothermia"))
 
     @Rule(
@@ -340,14 +334,14 @@ class Greetings(KnowledgeEngine):
         Fact(nausea="no"),
         Fact(blurred_vision="no"),
     )
-    def disease_13(self):
+    def coronavirus(self):
         self.declare(Fact(disease="Coronavirus"))
 
     # when the user's input doesn't match any disease in the knowledge base
     @Rule(Fact(action="find_disease"), Fact(disease=MATCH.disease), salience=-998)
-    def disease(self, disease_name):
+    def disease(self, disease):
         print("")
-        id_disease = disease_name
+        id_disease = disease
         disease_details = self.get_details(id_disease)
         treatments = self.get_treatments(id_disease)
         print("")

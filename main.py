@@ -1,4 +1,4 @@
-from src import Greetings
+from src import Greetings, Disease
 
 diseases_list = []
 diseases_symptoms = []
@@ -68,8 +68,23 @@ def if_not_matched(disease):
 # driver function
 if __name__ == "__main__":
     preprocess()
+    case = Disease(
+        'low',
+        'no',
+        'no',
+        'no',
+        'no',
+        'no',
+        'no',
+        'no',
+        'no',
+        'no',
+        'no',
+        'high',
+        'low',
+    )
     # creating class object
-    engine = Greetings(symptom_map, if_not_matched, get_treatments, get_details)
+    engine = Greetings(symptom_map, if_not_matched, get_treatments, get_details, case)
     # loop to keep running the code until user says no when asked for another diagnosis
     while 1:
         engine.reset()
