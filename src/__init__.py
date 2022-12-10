@@ -406,12 +406,16 @@ class Greetings(KnowledgeEngine):
         symptoms_list = symptoms.tolist()
         max_count = 0
         max_disease = ""
-        for disease_name, disease_symptom_values in self.symptom_map.items():
+        for disease_name, disease_symptoms in self.symptom_map.items():
             count = 0
-            for ref_symptom, in_symptom in zip(disease_symptom_values, symptoms_list):
-                if ref_symptom == in_symptom and (in_symptom in ['high', 'low', 'yes']):
-                    count = count + 1
+            for ref_symptom, in_symptom in zip(disease_symptoms.values(), symptoms_list):
+                if ref_symptom == in_symptom and self.symptom_exists(in_symptom):
+                    count += 1
             if count > max_count:
                 max_count, max_disease = count, disease_name
         if max_disease != "":
             self.if_not_matched(max_disease)
+
+    @staticmethod
+    def symptom_exists(in_symptom):
+        return in_symptom in ['high', 'low', 'yes']

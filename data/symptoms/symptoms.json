@@ -1,7 +1,7 @@
 {
   "Alzheimers": {
-    "headache":  "no",
-    "back_pain":  "no",
+    "headache": "no",
+    "back_pain": "no",
     "chest_pain": "no",
     "cough": "no",
     "fainting": "no",
@@ -14,10 +14,9 @@
     "nausea": "no",
     "blurred_vision": "no"
   },
-
   "Arthritis": {
-    "headache":  "no",
-    "back_pain":  "high",
+    "headache": "no",
+    "back_pain": "high",
     "chest_pain": "no",
     "cough": "no",
     "fainting": "no",
@@ -30,10 +29,9 @@
     "nausea": "no",
     "blurred_vision": "no"
   },
-
   "Asthma": {
-    "headache":  "no",
-    "back_pain":  "no",
+    "headache": "no",
+    "back_pain": "no",
     "chest_pain": "high",
     "cough": "high",
     "fainting": "no",
@@ -46,10 +44,9 @@
     "nausea": "no",
     "blurred_vision": "no"
   },
-
   "Coronavirus": {
-    "headache":  "high",
-    "back_pain":  "no",
+    "headache": "high",
+    "back_pain": "no",
     "chest_pain": "high",
     "cough": "high",
     "fainting": "no",
@@ -62,10 +59,9 @@
     "nausea": "no",
     "blurred_vision": "no"
   },
-
   "Diabetes": {
-    "headache":  "no",
-    "back_pain":  "no",
+    "headache": "no",
+    "back_pain": "no",
     "chest_pain": "no",
     "cough": "no",
     "fainting": "no",
@@ -78,10 +74,9 @@
     "nausea": "low",
     "blurred_vision": "low"
   },
-
   "Epilepsy": {
-    "headache":  "no",
-    "back_pain":  "no",
+    "headache": "no",
+    "back_pain": "no",
     "chest_pain": "no",
     "cough": "no",
     "fainting": "no",
@@ -94,10 +89,9 @@
     "nausea": "no",
     "blurred_vision": "no"
   },
-
   "Glaucoma": {
-    "headache":  "low",
-    "back_pain":  "no",
+    "headache": "low",
+    "back_pain": "no",
     "chest_pain": "no",
     "cough": "no",
     "fainting": "no",
@@ -109,5 +103,114 @@
     "sunken_eyes": "no",
     "nausea": "high",
     "blurred_vision": "low"
+  },
+  "Heart Disease": {
+    "headache": "no",
+    "back_pain": "no",
+    "chest_pain": "high",
+    "cough": "no",
+    "fainting": "no",
+    "sore_throat": "no",
+    "fatigue": "no",
+    "restlessness": "no",
+    "low_body_temp": "no",
+    "fever": "no",
+    "sunken_eyes": "no",
+    "nausea": "high",
+    "blurred_vision": "no"
+  },
+  "Heat Stroke": {
+    "headache": "high",
+    "back_pain": "no",
+    "chest_pain": "no",
+    "cough": "no",
+    "fainting": "no",
+    "sore_throat": "no",
+    "fatigue": "no",
+    "restlessness": "no",
+    "low_body_temp": "no",
+    "fever": "high",
+    "sunken_eyes": "no",
+    "nausea": "high",
+    "blurred_vision": "no"
+  },
+  "Hyperthyroidism": {
+    "headache": "no",
+    "back_pain": "no",
+    "chest_pain": "no",
+    "cough": "no",
+    "fainting": "no",
+    "sore_throat": "no",
+    "fatigue": "high",
+    "restlessness": "no",
+    "low_body_temp": "no",
+    "fever": "no",
+    "sunken_eyes": "no",
+    "nausea": "low",
+    "blurred_vision": "no"
+  },
+  "Hypothermia": {
+    "headache": "no",
+    "back_pain": "no",
+    "chest_pain": "no",
+    "cough": "no",
+    "fainting": "yes",
+    "sore_throat": "no",
+    "fatigue": "no",
+    "restlessness": "no",
+    "low_body_temp": "high",
+    "fever": "no",
+    "sunken_eyes": "no",
+    "nausea": "no",
+    "blurred_vision": "no"
+  },
+  "Jaundice": {
+    "headache": "no",
+    "back_pain": "no",
+    "chest_pain": "no",
+    "cough": "no",
+    "fainting": "no",
+    "sore_throat": "no",
+    "fatigue": "high",
+    "restlessness": "no",
+    "low_body_temp": "no",
+    "fever": "low",
+    "sunken_eyes": "no",
+    "nausea": "high",
+    "blurred_vision": "no"
+  },
+  "Sinusitis": {
+    "headache": "low",
+    "back_pain": "no",
+    "chest_pain": "no",
+    "cough": "high",
+    "fainting": "no",
+    "sore_throat": "high",
+    "fatigue": "no",
+    "restlessness": "no",
+    "low_body_temp": "no",
+    "fever": "low",
+    "sunken_eyes": "no",
+    "nausea": "no",
+    "blurred_vision": "no"
+  },
+  "Tuberculosis": {
+    "symptoms": {
+      "headache": "no",
+      "back_pain": "no",
+      "chest_pain": "high",
+      "cough": "low",
+      "fainting": "no",
+      "sore_throat": "no",
+      "fatigue": "no",
+      "restlessness": "no",
+      "low_body_temp": "no",
+      "fever": "high",
+      "sunken_eyes": "no",
+      "nausea": "no",
+      "blurred_vision": "no"
+    },
+    "description": "",
+    "treatment": ""
   }
 }
