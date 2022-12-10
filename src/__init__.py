@@ -3,7 +3,7 @@ from experta import *
 from src.disease import Disease
 
 
-class Greetings(KnowledgeEngine):
+class Doctor(KnowledgeEngine):
 
     def __init__(self, symptom_map, if_not_matched, get_treatments, get_details, case):
         self.symptom_map = symptom_map
